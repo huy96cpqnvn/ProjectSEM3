@@ -95,3 +95,16 @@ D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\r
 D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\NGO.deps.json
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\NGO.runtimeconfig.json
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\NGO.runtimeconfig.dev.json
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\NGO.dll
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\NGO.pdb
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\NGO.Views.dll
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\bin\Debug\netcoreapp3.1\NGO.Views.pdb
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\obj\Debug\netcoreapp3.1\NGO.csproj.CoreCompileInputs.cache
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\obj\Debug\netcoreapp3.1\NGO.MvcApplicationPartsAssemblyInfo.cache
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\obj\Debug\netcoreapp3.1\NGO.Views.pdb
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\obj\Debug\netcoreapp3.1\NGO.dll
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\obj\Debug\netcoreapp3.1\NGO.pdb
+D:\Work\xampp\htdocs\E_ProjectSem3\ProjectSEM3\NGO\NGO\obj\Debug\netcoreapp3.1\NGO.genruntimeconfig.cache
