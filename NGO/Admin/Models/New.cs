@@ -4,14 +4,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NGO.Models
+namespace Admin.Models
 {
-    public class AboutUs
+    public class New
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
-        public string ImageAbout { get; set; }
+
         [MaxLength(10000)]
         public string Description { get; set; }
+
+        public string ImagesNew { get; set; }
+
+        public int? ProgrameId { get; set; }
+        public virtual Programme Programmes { get; set; }
     }
 }

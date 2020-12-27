@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NGO.Models
+namespace Admin.Models
 {
     public class AboutUs
     {
