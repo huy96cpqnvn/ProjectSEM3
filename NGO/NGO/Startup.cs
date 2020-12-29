@@ -55,16 +55,21 @@ namespace NGO
             app.UseStaticFiles();
             app.UseSession();
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapDefaultControllerRoute();
+                //endpoints.MapRazorPages();
+                SeedData.SeedDataNgo(app);
             });
+<<<<<<< Updated upstream
             SeedData.SeedDataNgo(app);
+=======
+
+>>>>>>> Stashed changes
         }
     }
 }

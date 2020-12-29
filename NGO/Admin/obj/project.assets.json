@@ -10091,19 +10091,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\xampp\\htdocs\\E_ProjectSem3\\ProjectSEM3\\NGO\\Admin\\Admin.csproj",
+      "projectUniqueName": "F:\\GithubRepos\\ProjectSEM3\\NGO\\Admin\\Admin.csproj",
       "projectName": "Admin",
-      "projectPath": "D:\\Work\\xampp\\htdocs\\E_ProjectSem3\\ProjectSEM3\\NGO\\Admin\\Admin.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\xampp\\htdocs\\E_ProjectSem3\\ProjectSEM3\\NGO\\Admin\\obj\\",
+      "projectPath": "F:\\GithubRepos\\ProjectSEM3\\NGO\\Admin\\Admin.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "F:\\GithubRepos\\ProjectSEM3\\NGO\\Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10190,7 +10190,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
