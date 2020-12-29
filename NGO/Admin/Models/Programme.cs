@@ -11,5 +11,6 @@ namespace Admin.Models
         public string Name { get; set; }
 
         public virtual ICollection<Donate> Donates { get; set; }
+        public virtual ICollection<New> News { get; set; }
     }
 }
