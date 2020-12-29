@@ -60,6 +60,7 @@ namespace Admin
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            SeedData.SeedDataNgo(app);
         }
     }
 }

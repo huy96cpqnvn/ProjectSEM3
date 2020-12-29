@@ -7,11 +7,12 @@ namespace NGO.Models
 {
     public interface IStoreRepository
     {
-        IQueryable<New> News { get;}
-        IQueryable<Programme> Programmes { get;}
-        IQueryable<Donate> Donates { get; }
-        IQueryable<Gallery> Galleries { get;}
-        IQueryable<AboutUs> AboutUs { get;}
-        IQueryable<Ngo> Ngos { get;}
+        IQueryable<AboutUs> aboutUs { get;}
+        IQueryable<Donate>  donates { get;}
+        IQueryable<Gallery> galleries { get; }
+        IQueryable<New> news { get; }
+        IQueryable<Ngo> ngos { get; }
+        IQueryable<Programme> programmes { get;}
+
     }
 }

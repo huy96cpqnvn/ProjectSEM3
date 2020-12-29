@@ -128,6 +128,7 @@ namespace NGO.Models
             }
 
             if (!context.Galleries.Any())
+            {
                 context.Galleries.AddRange(
                     new Gallery
                     {
@@ -170,7 +171,8 @@ namespace NGO.Models
                         ImageGallery = "hhttps://sosvietnam.org/getmedia/583440e2-9640-4eea-8ffe-1a2fa246859e/Toi-chon-hanh-tinh-xanh-6.jpg?width=425"
                     }
                 );
-            context.SaveChanges();
+                context.SaveChanges();
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ using NGO.Models;
 namespace NGO.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-    [Migration("20201228134438_InitialCreate")]
+    [Migration("20201229045008_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

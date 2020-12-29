@@ -125,11 +125,7 @@ namespace Admin.Models
                 context.SaveChanges();
             }
 
-            if (!context.Galleries.Any())
-<<<<<<< HEAD
-=======
-            {
->>>>>>> 6645a79dae091c24fc723937ff03fe3c40c3bd89
+
                 context.Galleries.AddRange(
                     new Gallery
                     {
@@ -172,11 +168,7 @@ namespace Admin.Models
                         ImageGallery = "hhttps://sosvietnam.org/getmedia/583440e2-9640-4eea-8ffe-1a2fa246859e/Toi-chon-hanh-tinh-xanh-6.jpg?width=425"
                     }
                 );
-<<<<<<< HEAD
-            context.SaveChanges();
-=======
-                context.SaveChanges();
-            }
+
 
             if (!context.Programmes.Any())
             {
@@ -260,7 +252,6 @@ namespace Admin.Models
                 );
                 context.SaveChanges();
             }
->>>>>>> 6645a79dae091c24fc723937ff03fe3c40c3bd89
         }
     }
 }
