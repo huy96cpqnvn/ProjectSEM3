@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Admin.Models;
-using Model.v
+//using Model.v
 namespace Admin.Controllers
 {
     public class HomeController : Controller

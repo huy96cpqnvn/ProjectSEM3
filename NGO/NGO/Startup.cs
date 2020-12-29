@@ -65,11 +65,6 @@ namespace NGO
                 //endpoints.MapRazorPages();
                 SeedData.SeedDataNgo(app);
             });
-<<<<<<< Updated upstream
-            SeedData.SeedDataNgo(app);
-=======
-
->>>>>>> Stashed changes
         }
     }
 }
