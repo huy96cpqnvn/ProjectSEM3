@@ -126,6 +126,10 @@ namespace Admin.Models
             }
 
             if (!context.Galleries.Any())
+<<<<<<< HEAD
+=======
+            {
+>>>>>>> 6645a79dae091c24fc723937ff03fe3c40c3bd89
                 context.Galleries.AddRange(
                     new Gallery
                     {
@@ -168,7 +172,95 @@ namespace Admin.Models
                         ImageGallery = "hhttps://sosvietnam.org/getmedia/583440e2-9640-4eea-8ffe-1a2fa246859e/Toi-chon-hanh-tinh-xanh-6.jpg?width=425"
                     }
                 );
+<<<<<<< HEAD
             context.SaveChanges();
+=======
+                context.SaveChanges();
+            }
+
+            if (!context.Programmes.Any())
+            {
+                context.Programmes.AddRange(
+                    new Programme
+                    {
+                        Name = "Education"
+                    },
+
+                    new Programme
+                    {
+                        Name = "Child Protection"
+                    },
+
+                    new Programme
+                    {
+                        Name = "Health and Nutrition"
+                    },
+
+                    new Programme
+                    {
+                        Name = "Safeguarding the Natural World "
+                    },
+
+                    new Programme
+                    {
+                        Name = "Support for people with disabilities"
+                    },
+
+                    new Programme
+                    {
+                        Name = "Support from overcome poverty, and achieve equal rights and voice"
+                    }
+
+
+                );
+                context.SaveChanges();
+            }
+
+            if (!context.AboutUs.Any())
+            {
+                context.AboutUs.AddRange(
+                    new AboutUs
+                    {
+                        Name = "WHO WE ARE",
+                        ImageAbout = "https://www.care.org.vn/wp-content/uploads/2019/11/cover-event-final-final-eng.png",
+                        Description = "We serve some of Vietnam’s most vulnerable groups in remote mountainous and urban areas to help them benefit from development, " +
+                        "overcome poverty, and achieve equal rights and voice. At the same times, we provide humanitarian and emergency assistance in times of natural disasters." +
+                        "We put women in the center because we know that we cannot overcome poverty until all people have equal rights and opportunities."
+                    }
+
+                );
+                context.SaveChanges();
+            }
+
+            if (!context.Donates.Any())
+            {
+                context.Donates.AddRange(
+                    new Donate
+                    {
+                        ProgrammeId = 1,
+                        Price = 50000,
+                        DateDonate = new DateTime(2020, 10, 05),
+                        Description = "support child to go to school"
+                    },
+                    new Donate
+                    {
+                        ProgrammeId = 2,
+                        Price = 100000,
+                        DateDonate = new DateTime(2020, 06, 12),
+                        Description = "afforestation and nature conservation"
+                    },
+                    new Donate
+                    {
+                        ProgrammeId = 3,
+                        Price = 2000000,
+                        DateDonate = new DateTime(2020, 07, 03),
+                        Description = "food and water support"
+                    }
+
+                );
+                context.SaveChanges();
+            }
+>>>>>>> 6645a79dae091c24fc723937ff03fe3c40c3bd89
         }
     }
 }
