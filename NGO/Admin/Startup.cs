@@ -61,6 +61,8 @@ namespace Admin
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
             SeedData.SeedDataNgo(app);
+
+
         }
     }
 }
