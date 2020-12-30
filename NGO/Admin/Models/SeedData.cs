@@ -70,7 +70,7 @@ namespace Admin.Models
             if (!context.News.Any())
             {
                 context.News.AddRange(
-                    new New
+                    new Article
                     {
                         Name = "All apart, all together: a glimpse into the festive season around the world",
                         ImagesNew = "https://oi-files-d8-prod.s3.eu-west-2.amazonaws.com/s3fs-public/styles/hero_image_extra_large/public/2020-12/Honduras_hurricane_family.jpg?h=bf87a64c&itok=2EH-81lX",
@@ -78,7 +78,7 @@ namespace Admin.Models
                         "This year's festive period is like no other. The Covid-19 pandemic and its economic fallout have impacted all of us, some far more than others. Millions are bracing for this festive season with little or no food, as their income got cut. Some have lost their loved ones to the disease." +
                         "Here are some stories showing how vulnerable people around the world are celebrating this year. The holidays have united them in their hope for a better future, despite all the hardship.",
                     },
-                    new New
+                    new Article
                     {
                         Name = "Multidimensional Inequality in Vietnam",
                         ImagesNew = "https://oi-files-cng-prod.s3.amazonaws.com/vietnam.oxfam.org/s3fs-public/styles/full-width-670x335-2_1/public/103898.jpg?itok=68lzkcMA",
@@ -86,7 +86,7 @@ namespace Admin.Models
                         "This study is a first attempt to examine multidimensional inequality in those key domains of inequality in the country: life and health, education and learning, and participation, influence, and voice." +
                         "The research findings point at large gaps between subpopulation groups across spatial, socio-economic, and ethnic axes of inequalities in their capability to enjoy the right to a proper, quality education and to experience a life free of illness and access to quality healthcare facilities. People belonging to ethnic minorities (EM), women, and inhabitants from rural provinces are more affected by inequalities in health and education than the Kinh, men, and higher-income households living in predominantly urban areas. Furthermore, inequality in the capability to participate, raise one’s voice, and influence public matters is extremely acute between men and women and the poorest households and with a lower level of education, compared to the richest, urban, highly educated households."
                     },
-                    new New
+                    new Article
                     {
                         Name = "THE CAMPAIGN “SPREADING LOVE - EDUCATION WITH LOVE”",
                         ImagesNew = "https://vietnam.savethechildren.net/sites/vietnam.savethechildren.net/files/field/image/%C4%90%E1%BA%A1i%20di%E1%BB%87n%20tr%E1%BA%BB%20em%20v%C3%A0%20c%C3%A1c%20%C4%91%E1%BA%A1i%20bi%E1%BB%83u%20tham%20d%E1%BB%B1%20H%E1%BB%99i%20th%E1%BA%A3o.jpg",
@@ -94,7 +94,7 @@ namespace Admin.Models
                         "The campaign was held in October-November 2020 with a series of activities including the 21-day challenge 'My home story - Education with Love', outdoor communication events, social media communication, and trainings for children and policy dialogue “Voices of children and stakeholders in promoting children's rights and ending physical and humiliating punishments against children”. We have managed to gain 200,000 reaches on social media. The Festival “Spreading Love” was held in Hanoi and Ho Chi Minh City with the participation of nearly 1,000 children, caregivers and representatives of related agencies. It also spread and positively inspired the community with the participation and accompany of some famous artists such as Meritorious artist Xuan Bac, Singer Chi Thien, Rapper Wowy ..." +
                         "More than 60 children participated in the training on children's participation in the prevention of physical and humiliating punishments against children. They analyzed the situation and causes of punishments against children and proposed solutions to promote children's rights. They presented children's recommendations at the policy dialogue with the messages: “We love parents with heart, parents please don't love me with corporal punishment or scold!”. They expressed their wishes for their voices to be heard, understood and recognized by the state management agencies, schools, and parents."
                     },
-                    new New
+                    new Article
                     {
                         Name = "SAFE WATER, PROPERTY DAMAGE, AND EDUCATION INTERVENTIONS FOR VULNERABLE COMMUNITIES AFFECTED BY SEVERE FLOODS IN CENTRAL VIETNAM",
                         ImagesNew = "https://vietnam.savethechildren.net/sites/vietnam.savethechildren.net/files/field/image/2.png",
@@ -103,7 +103,7 @@ namespace Admin.Models
                         "In supporting the Vietnamese government to lessen the disasters’ effects on these communities, especially children, Save the Children is conducting interventions on safe water, property damage, and education by providing water filters, education kits, household kits and cash support. This immediate support is designed to help the affected children and communities to recover quickly after these devastating floods." +
                         "Please share your well wishes for these families across central Vietnam as they recover from these disasters."
                     },
-                    new New
+                    new Article
                     {
                         Name = "Công ty thời trang VMG hợp tác tài trợ chương trình 'Viết tiếp ước mơ'",
                         ImagesNew = "https://sosvietnam.org/getmedia/809acc3f-d931-49c9-934e-a336ff71b670/1.png?width=1920",
@@ -111,7 +111,7 @@ namespace Admin.Models
                         "Trong thời gian hoạt động, VMG Fashion có các hoạt động thiện nguyện, tài trợ cho các tổ chức phi lợi nhuận dành cho trẻ em cùng các hoạt động thiện nguyện do chính công ty tổ chức. Bên cạnh đó, VMG Fashion cũng tổ chức thăm hỏi, động viên và trao học bổng cho các học sinh nghèo có hoàn cảnh khó khăn vươn lên có thành tích học tập tốt." +
                         "VMG Fashion (Mã tài trợ CCG92) đã trở thành Nhà tài trợ Hoa hồng, cùng đồng hành với Làng trẻ em SOS Việt Nam thực hiện Chương trình “Viết tiếp ước mơ” từ ngày 10/11/2020 đến 10/11/2021 cho các con ở Làng trẻ em SOS TP. Hồ Chí Minh với tổng ngân sách là 100,000,000 VNĐ, cùng với nhiều hoạt động thăm gặp, đồng viên tinh thần cho các con vào các dịp trong năm."
                     },
-                    new New
+                    new Article
                     {
                         Name = "“Việt Nam cần coi bảo tồn đa dạng sinh học là một vấn đề đạo đức”",
                         ImagesNew = "https://wwfasia.awsassets.panda.org/img/1_original_ww2138125_741548.jpg",

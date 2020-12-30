@@ -47,7 +47,7 @@ namespace Admin.Controllers
         // GET: Donates/Create
         public IActionResult Create()
         {
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Id");
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Programe Name");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Id", donate.ProgrammeId);
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Programe Name", donate.ProgrammeId);
             return View(donate);
         }
 
@@ -81,7 +81,7 @@ namespace Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Id", donate.ProgrammeId);
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Programe Name", donate.ProgrammeId);
             return View(donate);
         }
 
@@ -117,7 +117,7 @@ namespace Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Id", donate.ProgrammeId);
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Programe Name", donate.ProgrammeId);
             return View(donate);
         }
 

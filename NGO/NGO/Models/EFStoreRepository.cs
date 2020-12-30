@@ -16,7 +16,7 @@ namespace NGO.Models
         public IQueryable<AboutUs> aboutUs => context.AboutUs;
         public IQueryable<Donate> donates => context.Donates;
         public IQueryable<Gallery> galleries => context.Galleries;
-        public IQueryable<New> news => context.News;
+        public IQueryable<Article> articles => context.Articles;
         public IQueryable<Ngo> ngos => context.Ngos;
         public IQueryable<Programme> programmes => context.Programmes;
 

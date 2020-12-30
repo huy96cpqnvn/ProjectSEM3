@@ -14,7 +14,7 @@ namespace Admin.Models
                 .UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database=ngo;MultipleActiveResultSets=true");
         public DbSet<Donate> Donates { get; set; }
         public DbSet<Gallery> Galleries { get; set; }
-        public DbSet<New> News { get; set; }
+        public DbSet<Article> Articles { get; set; }
         public DbSet<Programme> Programmes { get; set; }
         public DbSet<AboutUs> AboutUs { get; set; }
         public DbSet<Ngo> Ngos { get; set; }

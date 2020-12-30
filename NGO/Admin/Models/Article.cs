@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Admin.Models
 {
-    public class Programme
+    public class Article
     {
         public int Id { get; set; }
-        [Required, StringLength(100), Display(Name = "Programe Name")]
+
         public string Name { get; set; }
 
-        public virtual ICollection<Donate> Donates { get; set; }
-        public virtual ICollection<Article> Articles { get; set; }
+        [MaxLength(10000)]
+        public string Description { get; set; }
+
+        public string ImagesNew { get; set; }
+
+        public int? ProgrameId { get; set; }
+        public virtual Programme Programmes { get; set; }
     }
 }

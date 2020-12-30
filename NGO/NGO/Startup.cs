@@ -62,14 +62,8 @@ namespace NGO
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapDefaultControllerRoute();
-                //endpoints.MapRazorPages();
-                SeedData.SeedDataNgo(app);
             });
-<<<<<<< Updated upstream
             SeedData.SeedDataNgo(app);
-=======
-
->>>>>>> Stashed changes
         }
     }
 }

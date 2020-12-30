@@ -10,7 +10,7 @@ namespace NGO.Models
         IQueryable<AboutUs> aboutUs { get;}
         IQueryable<Donate>  donates { get;}
         IQueryable<Gallery> galleries { get; }
-        IQueryable<New> news { get; }
+        IQueryable<Article> articles { get; }
         IQueryable<Ngo> ngos { get; }
         IQueryable<Programme> programmes { get;}
 

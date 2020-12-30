@@ -76,10 +76,10 @@ namespace NGO.Models
                 context.SaveChanges();
             }
 
-            if (!context.News.Any())
+            if (!context.Articles.Any())
             {
-                context.News.AddRange(
-                    new New
+                context.Articles.AddRange(
+                    new Article
                     {
                         Name = "All apart, all together: a glimpse into the festive season around the world",
                         ImagesNew = "/img/ImageNew/Honduras_hurricane_family.jpg",
@@ -93,7 +93,7 @@ namespace NGO.Models
                         "Here are some stories showing how vulnerable people around the world are celebrating this year. " +
                         "The holidays have united them in their hope for a better future, despite all the hardship.",
                     },
-                    new New
+                    new Article
                     {
                         Name = "Multidimensional Inequality in Vietnam",
                         ImagesNew = "/img/ImageNew/poor_family.jpg",
@@ -108,7 +108,7 @@ namespace NGO.Models
                         "and ethnic axes of inequalities in their capability to enjoy the right to a proper, quality education and " +
                         "to experience a life free of illness and access to quality healthcare facilities. People belonging to ethnic minorities (EM), women, and inhabitants from rural provinces are more affected by inequalities in health and education than the Kinh, men, and higher-income households living in predominantly urban areas. Furthermore, inequality in the capability to participate, raise one’s voice, and influence public matters is extremely acute between men and women and the poorest households and with a lower level of education, compared to the richest, urban, highly educated households."
                     },
-                    new New
+                    new Article
                     {
                         Name = "THE CAMPAIGN “SPREADING LOVE - EDUCATION WITH LOVE”",
                         ImagesNew = "/img/ImageNew/campaign_for_children_in_SOS.jpg",
@@ -133,7 +133,7 @@ namespace NGO.Models
                         "with the messages: “We love parents with heart, parents please don't love me with corporal punishment or scold!”. " +
                         "They expressed their wishes for their voices to be heard, understood and recognized by the state management agencies, schools, and parents."
                     },
-                    new New
+                    new Article
                     {
                         Name = "SAFE WATER, PROPERTY DAMAGE, AND EDUCATION INTERVENTIONS FOR VULNERABLE COMMUNITIES AFFECTED BY SEVERE FLOODS IN CENTRAL VIETNAM",
                         ImagesNew = "/img/ImageNew/safe_water_and_food.png",
@@ -152,7 +152,7 @@ namespace NGO.Models
                         "communities to recover quickly after these devastating floods." +
                         "Please share your well wishes for these families across central Vietnam as they recover from these disasters."
                     },
-                    new New
+                    new Article
                     {
                         Name = "Công ty thời trang VMG hợp tác tài trợ chương trình 'Viết tiếp ước mơ'",
                         ImagesNew = "img/ImageNew/Wings_to_Dream.png",
@@ -169,7 +169,7 @@ namespace NGO.Models
                         "cho các con ở Làng trẻ em SOS TP. Hồ Chí Minh với tổng ngân sách là 100,000,000 VNĐ, cùng với nhiều hoạt động thăm gặp, " +
                         "đồng viên tinh thần cho các con vào các dịp trong năm."
                     },
-                    new New
+                    new Article
                     {
                         Name = "“Việt Nam cần coi bảo tồn đa dạng sinh học là một vấn đề đạo đức”",
                         ImagesNew = "img/ImageNew/Forest_fires.jpg",
@@ -314,5 +314,7 @@ namespace NGO.Models
                 );
                 context.SaveChanges();
             }
+
+        }
     }
 }
