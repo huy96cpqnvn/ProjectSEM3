@@ -65,6 +65,29 @@ namespace NGO.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Articles",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true),
+                    ImagesNew = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProgrameId = table.Column<int>(type: "int", nullable: true),
+                    ProgrammesId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Articles", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Articles_Programmes_ProgrammesId",
+                        column: x => x.ProgrammesId,
+                        principalTable: "Programmes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Donates",
                 columns: table => new
                 {
@@ -86,38 +109,15 @@ namespace NGO.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "News",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true),
-                    ImagesNew = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProgrameId = table.Column<int>(type: "int", nullable: true),
-                    ProgrammesId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_News", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_News_Programmes_ProgrammesId",
-                        column: x => x.ProgrammesId,
-                        principalTable: "Programmes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_Articles_ProgrammesId",
+                table: "Articles",
+                column: "ProgrammesId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Donates_ProgrammeId",
                 table: "Donates",
                 column: "ProgrammeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_News_ProgrammesId",
-                table: "News",
-                column: "ProgrammesId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -126,13 +126,13 @@ namespace NGO.Migrations
                 name: "AboutUs");
 
             migrationBuilder.DropTable(
+                name: "Articles");
+
+            migrationBuilder.DropTable(
                 name: "Donates");
 
             migrationBuilder.DropTable(
                 name: "Galleries");
-
-            migrationBuilder.DropTable(
-                name: "News");
 
             migrationBuilder.DropTable(
                 name: "Ngos");

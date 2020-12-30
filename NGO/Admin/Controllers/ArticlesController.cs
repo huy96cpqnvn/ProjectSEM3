@@ -9,23 +9,23 @@ using Admin.Models;
 
 namespace Admin.Controllers
 {
-    public class DonatesController : Controller
+    public class ArticlesController : Controller
     {
         private readonly StoreDBContext _context;
 
-        public DonatesController(StoreDBContext context)
+        public ArticlesController(StoreDBContext context)
         {
             _context = context;
         }
 
-        // GET: Donates
+        // GET: Articles
         public async Task<IActionResult> Index()
         {
-            var storeDBContext = _context.Donates.Include(d => d.Programmes);
+            var storeDBContext = _context.Articles.Include(d => d.Programmes);
             return View(await storeDBContext.ToListAsync());
         }
 
-        // GET: Donates/Details/5
+        // GET: Articles/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,42 +33,42 @@ namespace Admin.Controllers
                 return NotFound();
             }
 
-            var donate = await _context.Donates
+            var article = await _context.Articles
                 .Include(d => d.Programmes)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (donate == null)
+            if (article == null)
             {
                 return NotFound();
             }
 
-            return View(donate);
+            return View(article);
         }
 
-        // GET: Donates/Create
+        // GET: Articles/Create
         public IActionResult Create()
         {
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name");
+            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name");
             return View();
         }
 
-        // POST: Donates/Create
+        // POST: Articles/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Price,ProgrammeId,DateDonate,Description")] Donate donate)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImagesNew,ProgrameId")] Article article)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(donate);
+                _context.Add(article);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name", donate.ProgrammeId);
-            return View(donate);
+            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrameId);
+            return View(article);
         }
 
-        // GET: Donates/Edit/5
+        // GET: Articles/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -76,23 +76,23 @@ namespace Admin.Controllers
                 return NotFound();
             }
 
-            var donate = await _context.Donates.FindAsync(id);
-            if (donate == null)
+            var article = await _context.Articles.FindAsync(id);
+            if (article == null)
             {
                 return NotFound();
             }
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name", donate.ProgrammeId);
-            return View(donate);
+            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrameId);
+            return View(article);
         }
 
-        // POST: Donates/Edit/5
+        // POST: Articles/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Price,ProgrammeId,DateDonate,Description")] Donate donate)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,ImagesNew,ProgrameId")] Article article)
         {
-            if (id != donate.Id)
+            if (id != article.Id)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace Admin.Controllers
             {
                 try
                 {
-                    _context.Update(donate);
+                    _context.Update(article);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DonateExists(donate.Id))
+                    if (!ArticleExists(article.Id))
                     {
                         return NotFound();
                     }
@@ -117,11 +117,11 @@ namespace Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name", donate.ProgrammeId);
-            return View(donate);
+            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrameId);
+            return View(article);
         }
 
-        // GET: Donates/Delete/5
+        // GET: Articles/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,31 +129,31 @@ namespace Admin.Controllers
                 return NotFound();
             }
 
-            var donate = await _context.Donates
+            var article = await _context.Articles
                 .Include(d => d.Programmes)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (donate == null)
+            if (article == null)
             {
                 return NotFound();
             }
 
-            return View(donate);
+            return View(article);
         }
 
-        // POST: Donates/Delete/5
+        // POST: Articles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var donate = await _context.Donates.FindAsync(id);
-            _context.Donates.Remove(donate);
+            var article = await _context.Articles.FindAsync(id);
+            _context.Articles.Remove(article);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DonateExists(int id)
+        private bool ArticleExists(int id)
         {
-            return _context.Donates.Any(e => e.Id == id);
+            return _context.Articles.Any(e => e.Id == id);
         }
     }
 }

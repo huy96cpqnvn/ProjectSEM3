@@ -41,6 +41,36 @@ namespace NGO.Migrations
                     b.ToTable("AboutUs");
                 });
 
+            modelBuilder.Entity("NGO.Models.Article", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(10000)
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagesNew")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProgrameId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProgrammesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProgrammesId");
+
+                    b.ToTable("Articles");
+                });
+
             modelBuilder.Entity("NGO.Models.Donate", b =>
                 {
                     b.Property<int>("Id")
@@ -86,36 +116,6 @@ namespace NGO.Migrations
                     b.ToTable("Galleries");
                 });
 
-            modelBuilder.Entity("NGO.Models.New", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(10000)
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagesNew")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ProgrameId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ProgrammesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProgrammesId");
-
-                    b.ToTable("News");
-                });
-
             modelBuilder.Entity("NGO.Models.Ngo", b =>
                 {
                     b.Property<int>("Id")
@@ -153,20 +153,20 @@ namespace NGO.Migrations
                     b.ToTable("Programmes");
                 });
 
+            modelBuilder.Entity("NGO.Models.Article", b =>
+                {
+                    b.HasOne("NGO.Models.Programme", "Programmes")
+                        .WithMany()
+                        .HasForeignKey("ProgrammesId");
+
+                    b.Navigation("Programmes");
+                });
+
             modelBuilder.Entity("NGO.Models.Donate", b =>
                 {
                     b.HasOne("NGO.Models.Programme", "Programmes")
                         .WithMany("Donates")
                         .HasForeignKey("ProgrammeId");
-
-                    b.Navigation("Programmes");
-                });
-
-            modelBuilder.Entity("NGO.Models.New", b =>
-                {
-                    b.HasOne("NGO.Models.Programme", "Programmes")
-                        .WithMany()
-                        .HasForeignKey("ProgrammesId");
 
                     b.Navigation("Programmes");
                 });
