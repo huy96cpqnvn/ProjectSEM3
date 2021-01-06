@@ -6,16 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Admin.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace Admin.Controllers
 {
     public class ArticlesController : Controller
     {
         private readonly StoreDBContext _context;
-
-        public ArticlesController(StoreDBContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public ArticlesController(StoreDBContext context, IWebHostEnvironment hostingEnvironment)
         {
+            
             _context = context;
+            _hostEnvironment = hostingEnvironment;
         }
 
         // GET: Articles
@@ -56,10 +61,20 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImagesNew,ProgrameId")] Article article)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImageFile,ProgrameId")] Article article)
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(article.ImageFile.FileName);
+                string extension = Path.GetExtension(article.ImageFile.FileName);
+                article.ImagesNew = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await article.ImageFile.CopyToAsync(fileStream);
+                }
+
                 _context.Add(article);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -77,6 +92,8 @@ namespace Admin.Controllers
             }
 
             var article = await _context.Articles.FindAsync(id);
+                
+                
             if (article == null)
             {
                 return NotFound();
@@ -90,15 +107,27 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,ImagesNew,ProgrameId")] Article article)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,ImageFile,ProgrameId")] Article article)
         {
+            
+
             if (id != article.Id)
             {
                 return NotFound();
             }
-
+            
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(article.ImageFile.FileName);
+                string extension = Path.GetExtension(article.ImageFile.FileName);
+                article.ImagesNew = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await article.ImageFile.CopyToAsync(fileStream);
+                }
+
                 try
                 {
                     _context.Update(article);

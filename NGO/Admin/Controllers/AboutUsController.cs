@@ -6,16 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Admin.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Admin.Controllers
 {
     public class AboutUsController : Controller
     {
         private readonly StoreDBContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public AboutUsController(StoreDBContext context)
+        public AboutUsController(StoreDBContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: AboutUs
@@ -53,10 +57,20 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ImageAbout,Description")] AboutUs aboutUs)
+        public async Task<IActionResult> Create([Bind("Id,Name,ImageFileAbout,Description")] AboutUs aboutUs)
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(aboutUs.ImageFileAbout.FileName);
+                string extension = Path.GetExtension(aboutUs.ImageFileAbout.FileName);
+                aboutUs.ImageAbout = fileName = fileName + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await aboutUs.ImageFileAbout.CopyToAsync(fileStream);
+                }
+
                 _context.Add(aboutUs);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

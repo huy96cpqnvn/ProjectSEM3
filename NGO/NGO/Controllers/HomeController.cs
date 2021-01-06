@@ -11,17 +11,26 @@ namespace NGO.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private IStoreRepository repository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IStoreRepository repo)
         {
-            _logger = logger;
+            repository = repo;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+
+        public ViewResult Index()
+                => View(new ListViewModel
+                {
+                    Ngos = repository.ngos,
+                    Articles = repository.articles,
+                    Programmes = repository.programmes,
+                    Galleries = repository.galleries
+                });
 
         public ViewResult AboutUs()
 => View(new ListViewModel
@@ -31,12 +40,12 @@ namespace NGO.Controllers
         public ViewResult Blog()
 => View(new ListViewModel
 {
-
+    Articles = repository.articles
 });
         public ViewResult Causes()
 => View(new ListViewModel
 {
-
+    Programmes = repository.programmes
 });
         public ViewResult Contact()
 => View(new ListViewModel
@@ -56,7 +65,7 @@ namespace NGO.Controllers
         public ViewResult Gallery()
 => View(new ListViewModel
 {
-
+    Galleries = repository.galleries
 });
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
