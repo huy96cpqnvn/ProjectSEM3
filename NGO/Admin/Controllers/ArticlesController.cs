@@ -52,7 +52,7 @@ namespace Admin.Controllers
         // GET: Articles/Create
         public IActionResult Create()
         {
-            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name");
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name");
             return View();
         }
 
@@ -61,7 +61,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImageFile,ProgrameId")] Article article)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImageFile,ProgrammeId")] Article article)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrameId);
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrammeId);
             return View(article);
         }
 
@@ -98,7 +98,7 @@ namespace Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrameId);
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrammeId);
             return View(article);
         }
 
@@ -107,7 +107,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,ImageFile,ProgrameId")] Article article)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,ImageFile,ProgrammeId")] Article article)
         {
             
 
@@ -146,7 +146,7 @@ namespace Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProgrameId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrameId);
+            ViewData["ProgrammeId"] = new SelectList(_context.Programmes, "Id", "Name", article.ProgrammeId);
             return View(article);
         }
 

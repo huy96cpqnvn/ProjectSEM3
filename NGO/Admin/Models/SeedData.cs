@@ -204,7 +204,7 @@ namespace Admin.Models
                 context.Articles.AddRange(
                     new Article
                     {
-                        ProgrameId = 1,
+                        ProgrammeId = 1,
                         Name = "All apart, all together: a glimpse into the festive season around the world",
                         ImagesNew = "https://oi-files-d8-prod.s3.eu-west-2.amazonaws.com/s3fs-public/styles/hero_image_extra_large/public/2020-12/Honduras_hurricane_family.jpg?h=bf87a64c&itok=2EH-81lX",
                         Description = "This year David Argueta and his family will not celebrate Christmas in their house. The hurricanes Eta and Iota wreaked havoc on all of Central America, and destroyed a big part of their property. Despite being left with nothing, the tiny bit of hope they have keeps them optimistic. Next year they hope to rebuild their house and continue living there. Photo: Seth Berry/Oxfam" +
@@ -213,7 +213,7 @@ namespace Admin.Models
                     },
                     new Article
                     {
-                        ProgrameId = 2,
+                        ProgrammeId = 2,
                         Name = "Multidimensional Inequality in Vietnam",
                         ImagesNew = "https://oi-files-cng-prod.s3.amazonaws.com/vietnam.oxfam.org/s3fs-public/styles/full-width-670x335-2_1/public/103898.jpg?itok=68lzkcMA",
                         Description = "Vietnam has achieved great economic development over the past 30 years. However, there is growing concern over increasing inequalities in other aspects of life, in particular opportunities and voice for certain population subgroups. Meanwhile, there is still a sizeable and significant lacuna in multidimensional analysis to provide a comprehensive and indepth view of inequality." +
@@ -222,6 +222,7 @@ namespace Admin.Models
                     },
                     new Article
                     {
+                        ProgrammeId = 1,
                         Name = "THE CAMPAIGN “SPREADING LOVE - EDUCATION WITH LOVE”",
                         ImagesNew = "https://vietnam.savethechildren.net/sites/vietnam.savethechildren.net/files/field/image/%C4%90%E1%BA%A1i%20di%E1%BB%87n%20tr%E1%BA%BB%20em%20v%C3%A0%20c%C3%A1c%20%C4%91%E1%BA%A1i%20bi%E1%BB%83u%20tham%20d%E1%BB%B1%20H%E1%BB%99i%20th%E1%BA%A3o.jpg",
                         Description = "In order to raise awareness on the elimination of physical and humiliating punishments against children, Save the Children, together with Management and Sustainable Development Institute (MSD) collaborate with Child Rights Governance Network and Department of Children Affairs, and many other government partners to organize the campaign “Spreading Love - Education with Love”." +
@@ -230,7 +231,7 @@ namespace Admin.Models
                     },
                     new Article
                     {
-                        ProgrameId = 1,
+                        ProgrammeId = 1,
                         Name = "SAFE WATER, PROPERTY DAMAGE, AND EDUCATION INTERVENTIONS FOR VULNERABLE COMMUNITIES AFFECTED BY SEVERE FLOODS IN CENTRAL VIETNAM",
                         ImagesNew = "https://vietnam.savethechildren.net/sites/vietnam.savethechildren.net/files/field/image/2.png",
                         Description = "Since the beginning of October, the provinces in the central Vietnam have experienced several tropical storms followed by heavy rains that caused severe widespread flooding and landslides. The most seriously affected provinces are Quang Binh, Quang Tri, Thua Thien Hue and Quang Nam. This series of disasters have damaged houses, schools, and crops." +
@@ -240,7 +241,7 @@ namespace Admin.Models
                     },
                     new Article
                     {
-                        ProgrameId = 3,
+                        ProgrammeId = 3,
                         Name = "Công ty thời trang VMG hợp tác tài trợ chương trình 'Viết tiếp ước mơ'",
                         ImagesNew = "https://sosvietnam.org/getmedia/809acc3f-d931-49c9-934e-a336ff71b670/1.png?width=1920",
                         Description = "VMG Fashion luôn có những hành động tích cực chia sẻ với cộng đồng với sứ mệnh nỗ lực xây dựng môi trường làm việc chuyên nghiệp, phát triển đội ngũ nhân viên tinh nhuệ, gắn kết và đồng lòng xây dựng doanh nghiệp phát triển bền vững, tập trung toàn lực vào sứ mệnh mang phong cách thời trang lịch lãm và tinh tế đến cuộc sống hàng ngày, đồng hành cùng thành công và hạnh phúc của khách hàng; không ngừng đóng góp giá trị cho thành công của cộng đồng và xã hội." +
@@ -249,7 +250,7 @@ namespace Admin.Models
                     },
                     new Article
                     {
-                        ProgrameId = 3,
+                        ProgrammeId = 3,
                         Name = "“Việt Nam cần coi bảo tồn đa dạng sinh học là một vấn đề đạo đức”",
                         ImagesNew = "https://wwfasia.awsassets.panda.org/img/1_original_ww2138125_741548.jpg",
                         Description = "“Chúng ta đang đối diện với những thách thức to lớn liên quan đến đa dạng sinh học do chính con người tạo ra. Đã đến lúc chúng ta, bên cạnh việc sử dụng chính sách và pháp luật, thì cần phải coi bảo tồn đa dạng sinh học là một vấn đề đạo đức, trước hết ở cấp lãnh đạo, sau đến mọi người dân” Bộ trưởng Trần Hồng Hà phát biểu trong video trực tuyến tại Hội nghị Thượng đỉnh Liên Hợp Quốc về Đa dạng Sinh học. " +

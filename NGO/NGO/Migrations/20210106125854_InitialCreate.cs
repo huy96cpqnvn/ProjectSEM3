@@ -72,16 +72,15 @@ namespace NGO.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true),
-                    ImagesNew = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProgrameId = table.Column<int>(type: "int", nullable: true),
-                    ProgrammesId = table.Column<int>(type: "int", nullable: true)
+                    ImagesNew = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    ProgrammeId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Articles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Articles_Programmes_ProgrammesId",
-                        column: x => x.ProgrammesId,
+                        name: "FK_Articles_Programmes_ProgrammeId",
+                        column: x => x.ProgrammeId,
                         principalTable: "Programmes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -110,9 +109,9 @@ namespace NGO.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Articles_ProgrammesId",
+                name: "IX_Articles_ProgrammeId",
                 table: "Articles",
-                column: "ProgrammesId");
+                column: "ProgrammeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Donates_ProgrammeId",

@@ -10,7 +10,7 @@ using NGO.Models;
 namespace NGO.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-    [Migration("20201230070716_InitialCreate")]
+    [Migration("20210106125854_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,20 +55,17 @@ namespace NGO.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImagesNew")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProgrameId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ProgrammesId")
+                    b.Property<int?>("ProgrammeId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProgrammesId");
+                    b.HasIndex("ProgrammeId");
 
                     b.ToTable("Articles");
                 });
@@ -158,8 +155,8 @@ namespace NGO.Migrations
             modelBuilder.Entity("NGO.Models.Article", b =>
                 {
                     b.HasOne("NGO.Models.Programme", "Programmes")
-                        .WithMany()
-                        .HasForeignKey("ProgrammesId");
+                        .WithMany("Articles")
+                        .HasForeignKey("ProgrammeId");
 
                     b.Navigation("Programmes");
                 });
@@ -175,6 +172,8 @@ namespace NGO.Migrations
 
             modelBuilder.Entity("NGO.Models.Programme", b =>
                 {
+                    b.Navigation("Articles");
+
                     b.Navigation("Donates");
                 });
 #pragma warning restore 612, 618

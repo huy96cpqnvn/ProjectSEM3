@@ -26,7 +26,7 @@ namespace NGO.Models
         [DisplayName("Upload File")]
         public IFormFile ImageFile { get; set; }
 
-        public int? ProgrameId { get; set; }
+        public int? ProgrammeId { get; set; }
         public virtual Programme Programmes { get; set; }
     }
 }

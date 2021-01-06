@@ -17,7 +17,8 @@ namespace Admin.Models
 
         [MaxLength(10000)]
         public string Description { get; set; }
-
+        public int? ProgrammeId { get; set; }
+        public virtual Programme Programmes { get; set; }
         [Column(TypeName = "nvarchar(100)")]
         [DisplayName("Image Name")]
         public string ImagesNew { get; set; }
@@ -26,7 +27,6 @@ namespace Admin.Models
         [DisplayName("Upload File")]
         public IFormFile ImageFile { get; set; }
 
-        public int? ProgrameId { get; set; }
-        public virtual Programme Programmes { get; set; }
+        
     }
 }
