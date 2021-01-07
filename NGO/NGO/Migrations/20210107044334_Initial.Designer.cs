@@ -10,8 +10,8 @@ using NGO.Models;
 namespace NGO.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-    [Migration("20210106125854_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210107044334_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -143,6 +143,12 @@ namespace NGO.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
