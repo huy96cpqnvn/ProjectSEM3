@@ -163,10 +163,8 @@ namespace NGO.Models
                     new AboutUs
                     {
                         Name = "WHO WE ARE",
-                        ImageAbout = "https://www.care.org.vn/wp-content/uploads/2019/11/cover-event-final-final-eng.png",
-                        Description = "We serve some of Vietnam’s most vulnerable groups in remote mountainous and urban areas to help them benefit from development, " +
-                        "overcome poverty, and achieve equal rights and voice. At the same times, we provide humanitarian and emergency assistance in times of natural disasters." +
-                        "We put women in the center because we know that we cannot overcome poverty until all people have equal rights and opportunities."
+                        ImageAbout = "bg_6.jpg",
+                        Description = ""
                     }
 
                 );
