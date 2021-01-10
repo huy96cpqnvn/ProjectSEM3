@@ -35,9 +35,9 @@ namespace NGO.Controllers
         public ViewResult AboutUs()
 => View(new ListViewModel
 {
-
+    aboutUs = repository.aboutUs
 });
-        public ViewResult Blog()
+        public ViewResult News()
 => View(new ListViewModel
 {
     Articles = repository.articles
@@ -57,7 +57,7 @@ namespace NGO.Controllers
 {
 
 });
-        public ViewResult Events()
+        public ViewResult Partner()
 => View(new ListViewModel
 {
 
@@ -65,7 +65,9 @@ namespace NGO.Controllers
         public ViewResult Gallery()
 => View(new ListViewModel
 {
-    Galleries = repository.galleries
+    Galleries = repository.galleries,
+    NumberGalleryPerRow = 4,
+    GalleryColumns = (repository.galleries.Count()/4) + (repository.galleries.Count()%4 == 0 ? 0:1)
 });
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
