@@ -13,6 +13,8 @@ namespace NGO.Controllers
     {
         private IStoreRepository repository;
 
+        public int PageSize = 4;
+
         public HomeController(IStoreRepository repo)
         {
             repository = repo;

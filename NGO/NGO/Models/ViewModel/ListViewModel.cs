@@ -15,5 +15,6 @@ namespace NGO.Models.ViewModel
         public int GalleryColumns { get; set; }
         public IEnumerable<AboutUs> aboutUs { get; set; }
         public IEnumerable<Ngo> Ngos { get; set; }
+        public PageInfo PageInfo { get; set; }
     }
 }
