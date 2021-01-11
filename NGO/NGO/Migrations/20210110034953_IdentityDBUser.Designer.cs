@@ -10,18 +10,8 @@ using NGO.Models;
 namespace NGO.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-<<<<<<< HEAD
-    [Migration("20210107044334_Initial")]
-    partial class Initial
-=======
-<<<<<<< HEAD:NGO/NGO/Migrations/20210110034937_InitialCreate.Designer.cs
-    [Migration("20210110034937_InitialCreate")]
-    partial class InitialCreate
-=======
-    [Migration("20210107044334_Initial")]
-    partial class Initial
->>>>>>> ce4259d245cec8f61255e4c09f6e2e581a57ae10:NGO/NGO/Migrations/20210107044334_Initial.Designer.cs
->>>>>>> ce4259d245cec8f61255e4c09f6e2e581a57ae10
+    [Migration("20210110034953_IdentityDBUser")]
+    partial class IdentityDBUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -153,12 +143,6 @@ namespace NGO.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");

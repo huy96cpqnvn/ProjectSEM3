@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Admin.Models
+namespace Admin.Models.ViewModel
 {
-    public class User
+    public class RegisterViewModel
     {
         public int Id { get; set; }
 
@@ -22,8 +21,17 @@ namespace Admin.Models
 
         public DateTime BirthDay { get; set; }
         public int PhoneNumber { get; set; }
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
         
-        
+        [DataType(DataType.Password)]
+        [Display(Name = "ConfirmPassword")]
+        [Compare("Password", ErrorMessage = "Password and confirmation password not match.")]
+        public string ConfirmPassword { get; set; }
+
     }
 }
