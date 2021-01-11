@@ -28,5 +28,7 @@ namespace NGO.Models
 
         public int? ProgrammeId { get; set; }
         public virtual Programme Programmes { get; set; }
+
+        public virtual ICollection<Article> Articles { get; set; }
     }
 }

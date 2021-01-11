@@ -19,7 +19,7 @@
                 @*<partial name="ArticleSummary" model="p" />*@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('../images/image_1.jpg');">
+                        <a asp-area="" asp-controller="Home" asp-action="ArticleSummary" asp-route-id="@p.Id" class="block-20" style="background-image: url('../images/@p.ImagesNew');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
@@ -27,8 +27,8 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <h3 class="heading mt-3"><a href="#">@p.Name</a></h3>
+                            <p>@p.Description</p>
                         </div>
                     </div>
                 </div>
@@ -36,18 +36,16 @@
             }
 
         </div>
+
         <div class="row mt-5">
             <div class="col text-center">
                 <div class="block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
-                    </ul>
+                    <div page-model="@Model.PageInfo" page-action="News" page-classes-enabled="true"
+                         page-class="btn" page-class-normal="btn-outline-dark"
+                         page-class-selected="btn-primary"
+                         class="btn-group pull-right m-1">
+
+                    </div>
                 </div>
             </div>
         </div>
