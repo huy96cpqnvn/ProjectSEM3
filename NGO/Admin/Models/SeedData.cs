@@ -202,64 +202,14 @@ namespace Admin.Models
             if (!context.Articles.Any())
             {
                 context.Articles.AddRange(
-                    new Article
-                    {
-                        ProgrammeId = 1,
-                        Name = "All apart, all together: a glimpse into the festive season around the world",
-                        ImagesNew = "https://oi-files-d8-prod.s3.eu-west-2.amazonaws.com/s3fs-public/styles/hero_image_extra_large/public/2020-12/Honduras_hurricane_family.jpg?h=bf87a64c&itok=2EH-81lX",
-                        Description = "This year David Argueta and his family will not celebrate Christmas in their house. The hurricanes Eta and Iota wreaked havoc on all of Central America, and destroyed a big part of their property. Despite being left with nothing, the tiny bit of hope they have keeps them optimistic. Next year they hope to rebuild their house and continue living there. Photo: Seth Berry/Oxfam" +
-                        "This year's festive period is like no other. The Covid-19 pandemic and its economic fallout have impacted all of us, some far more than others. Millions are bracing for this festive season with little or no food, as their income got cut. Some have lost their loved ones to the disease." +
-                        "Here are some stories showing how vulnerable people around the world are celebrating this year. The holidays have united them in their hope for a better future, despite all the hardship.",
-                    },
-                    new Article
-                    {
-                        ProgrammeId = 2,
-                        Name = "Multidimensional Inequality in Vietnam",
-                        ImagesNew = "https://oi-files-cng-prod.s3.amazonaws.com/vietnam.oxfam.org/s3fs-public/styles/full-width-670x335-2_1/public/103898.jpg?itok=68lzkcMA",
-                        Description = "Vietnam has achieved great economic development over the past 30 years. However, there is growing concern over increasing inequalities in other aspects of life, in particular opportunities and voice for certain population subgroups. Meanwhile, there is still a sizeable and significant lacuna in multidimensional analysis to provide a comprehensive and indepth view of inequality." +
-                        "This study is a first attempt to examine multidimensional inequality in those key domains of inequality in the country: life and health, education and learning, and participation, influence, and voice." +
-                        "The research findings point at large gaps between subpopulation groups across spatial, socio-economic, and ethnic axes of inequalities in their capability to enjoy the right to a proper, quality education and to experience a life free of illness and access to quality healthcare facilities. People belonging to ethnic minorities (EM), women, and inhabitants from rural provinces are more affected by inequalities in health and education than the Kinh, men, and higher-income households living in predominantly urban areas. Furthermore, inequality in the capability to participate, raise one’s voice, and influence public matters is extremely acute between men and women and the poorest households and with a lower level of education, compared to the richest, urban, highly educated households."
-                    },
-                    new Article
-                    {
-                        ProgrammeId = 1,
-                        Name = "THE CAMPAIGN “SPREADING LOVE - EDUCATION WITH LOVE”",
-                        ImagesNew = "https://vietnam.savethechildren.net/sites/vietnam.savethechildren.net/files/field/image/%C4%90%E1%BA%A1i%20di%E1%BB%87n%20tr%E1%BA%BB%20em%20v%C3%A0%20c%C3%A1c%20%C4%91%E1%BA%A1i%20bi%E1%BB%83u%20tham%20d%E1%BB%B1%20H%E1%BB%99i%20th%E1%BA%A3o.jpg",
-                        Description = "In order to raise awareness on the elimination of physical and humiliating punishments against children, Save the Children, together with Management and Sustainable Development Institute (MSD) collaborate with Child Rights Governance Network and Department of Children Affairs, and many other government partners to organize the campaign “Spreading Love - Education with Love”." +
-                        "The campaign was held in October-November 2020 with a series of activities including the 21-day challenge 'My home story - Education with Love', outdoor communication events, social media communication, and trainings for children and policy dialogue “Voices of children and stakeholders in promoting children's rights and ending physical and humiliating punishments against children”. We have managed to gain 200,000 reaches on social media. The Festival “Spreading Love” was held in Hanoi and Ho Chi Minh City with the participation of nearly 1,000 children, caregivers and representatives of related agencies. It also spread and positively inspired the community with the participation and accompany of some famous artists such as Meritorious artist Xuan Bac, Singer Chi Thien, Rapper Wowy ..." +
-                        "More than 60 children participated in the training on children's participation in the prevention of physical and humiliating punishments against children. They analyzed the situation and causes of punishments against children and proposed solutions to promote children's rights. They presented children's recommendations at the policy dialogue with the messages: “We love parents with heart, parents please don't love me with corporal punishment or scold!”. They expressed their wishes for their voices to be heard, understood and recognized by the state management agencies, schools, and parents."
-                    },
-                    new Article
-                    {
-                        ProgrammeId = 1,
-                        Name = "SAFE WATER, PROPERTY DAMAGE, AND EDUCATION INTERVENTIONS FOR VULNERABLE COMMUNITIES AFFECTED BY SEVERE FLOODS IN CENTRAL VIETNAM",
-                        ImagesNew = "https://vietnam.savethechildren.net/sites/vietnam.savethechildren.net/files/field/image/2.png",
-                        Description = "Since the beginning of October, the provinces in the central Vietnam have experienced several tropical storms followed by heavy rains that caused severe widespread flooding and landslides. The most seriously affected provinces are Quang Binh, Quang Tri, Thua Thien Hue and Quang Nam. This series of disasters have damaged houses, schools, and crops." +
-                        "“Heavy rains and floods happen every year, but this year is much more severe. Even though we were notified by the authority and could anticipate how bad it could get, but in low-lying areas like where I live, floodwater rushed in too quickly. Floodwater was as high as 1 meter in my house; 1 pig, half of my chicken flock and 70-80 kg of rice were gone. I can only sell that ruined rice as livestock feed now.” – Mr. Minh, living in Trieu Long commune, Quang Tri province, said." +
-                        "In supporting the Vietnamese government to lessen the disasters’ effects on these communities, especially children, Save the Children is conducting interventions on safe water, property damage, and education by providing water filters, education kits, household kits and cash support. This immediate support is designed to help the affected children and communities to recover quickly after these devastating floods." +
-                        "Please share your well wishes for these families across central Vietnam as they recover from these disasters."
-                    },
-                    new Article
-                    {
-                        ProgrammeId = 3,
-                        Name = "Công ty thời trang VMG hợp tác tài trợ chương trình 'Viết tiếp ước mơ'",
-                        ImagesNew = "https://sosvietnam.org/getmedia/809acc3f-d931-49c9-934e-a336ff71b670/1.png?width=1920",
-                        Description = "VMG Fashion luôn có những hành động tích cực chia sẻ với cộng đồng với sứ mệnh nỗ lực xây dựng môi trường làm việc chuyên nghiệp, phát triển đội ngũ nhân viên tinh nhuệ, gắn kết và đồng lòng xây dựng doanh nghiệp phát triển bền vững, tập trung toàn lực vào sứ mệnh mang phong cách thời trang lịch lãm và tinh tế đến cuộc sống hàng ngày, đồng hành cùng thành công và hạnh phúc của khách hàng; không ngừng đóng góp giá trị cho thành công của cộng đồng và xã hội." +
-                        "Trong thời gian hoạt động, VMG Fashion có các hoạt động thiện nguyện, tài trợ cho các tổ chức phi lợi nhuận dành cho trẻ em cùng các hoạt động thiện nguyện do chính công ty tổ chức. Bên cạnh đó, VMG Fashion cũng tổ chức thăm hỏi, động viên và trao học bổng cho các học sinh nghèo có hoàn cảnh khó khăn vươn lên có thành tích học tập tốt." +
-                        "VMG Fashion (Mã tài trợ CCG92) đã trở thành Nhà tài trợ Hoa hồng, cùng đồng hành với Làng trẻ em SOS Việt Nam thực hiện Chương trình “Viết tiếp ước mơ” từ ngày 10/11/2020 đến 10/11/2021 cho các con ở Làng trẻ em SOS TP. Hồ Chí Minh với tổng ngân sách là 100,000,000 VNĐ, cùng với nhiều hoạt động thăm gặp, đồng viên tinh thần cho các con vào các dịp trong năm."
-                    },
-                    new Article
-                    {
-                        ProgrammeId = 3,
-                        Name = "“Việt Nam cần coi bảo tồn đa dạng sinh học là một vấn đề đạo đức”",
-                        ImagesNew = "https://wwfasia.awsassets.panda.org/img/1_original_ww2138125_741548.jpg",
-                        Description = "“Chúng ta đang đối diện với những thách thức to lớn liên quan đến đa dạng sinh học do chính con người tạo ra. Đã đến lúc chúng ta, bên cạnh việc sử dụng chính sách và pháp luật, thì cần phải coi bảo tồn đa dạng sinh học là một vấn đề đạo đức, trước hết ở cấp lãnh đạo, sau đến mọi người dân” Bộ trưởng Trần Hồng Hà phát biểu trong video trực tuyến tại Hội nghị Thượng đỉnh Liên Hợp Quốc về Đa dạng Sinh học. " +
-                        "Hội nghị Liên Hợp Quốc về Đa dạng Sinh học được tổ chức vào ngày hôm nay, 30 tháng 9 năm 2020 ở cấp nguyên thủ quốc gia và chính phủ với chủ đề Hành động Khẩn cấp về Đa dạng Sinh học vì sự Phát triển Bền vững. " +
-                        "Hội nghị được tổ chức khi chúng ta tiến gần đến cuối Thập kỷ của Liên Hợp Quốc về Đa dạng Sinh học 2011-2020 với toàn bộ mục tiêu mà 190 nước cùng đặt ra từ 10 năm trước đều không đạt được." +
-                        "Trước đó, ngày 28 tháng 9, các nhà lãnh đạo từ nhiều quốc gia cũng tham gia sự kiện của các nhà lãnh đạo và thông qua Cam kết của các Nhà lãnh đạo vì Thiên nhiên. Việt Nam cũng bày tỏ sự quan tâm tới cam kết này. " +
-                        "Bản cam kết là một phần của chương trình Nature for Life Hub, và là một hồi đáp trực tiếp đối với Tình trạng Khẩn cấp trên toàn cầu, nêu bật tính cấp thiết của việc giải quyết các cuộc khủng hoảng có sự liên hệ mật thiết với nhau: đa dạng sinh học, khí hậu và y tế."
-                    }
-                );
+                        new Article
+                        {
+                            ProgrammeId = 1,
+                            Name = "TUan",
+                            Description = "dkajskdaskd",
+                            ImagesNew = "cause-3.jpg"
+                        }
+                    );
                 context.SaveChanges();
             }
         }
