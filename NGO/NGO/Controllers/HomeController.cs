@@ -13,6 +13,8 @@ namespace NGO.Controllers
     {
         private IStoreRepository repository;
 
+        public int PageSize = 6;
+
         public HomeController(IStoreRepository repo)
         {
             repository = repo;
@@ -35,12 +37,21 @@ namespace NGO.Controllers
         public ViewResult AboutUs()
 => View(new ListViewModel
 {
-
+    aboutUs = repository.aboutUs
 });
-        public ViewResult Blog()
+        public ViewResult News(int newsPage = 1)
 => View(new ListViewModel
 {
     Articles = repository.articles
+    .OrderBy(p => p.Id)
+               .Skip((newsPage - 1) * PageSize)
+               .Take(PageSize),
+    PageInfo = new PageInfo
+    {
+        CurrentPage = newsPage,
+        ItemsPerPage = PageSize,
+        TotalItems = repository.articles.Count()
+    },
 });
         public ViewResult Causes()
 => View(new ListViewModel
@@ -57,15 +68,24 @@ namespace NGO.Controllers
 {
 
 });
-        public ViewResult Events()
+        public ViewResult Partner()
 => View(new ListViewModel
 {
 
 });
+
+        public IActionResult ArticleSummary(int id)
+        => View(new ListViewModel
+        {
+            Articles = repository.articles.Where(a => a.Id == id)
+        });
+
         public ViewResult Gallery()
 => View(new ListViewModel
 {
-    Galleries = repository.galleries
+    Galleries = repository.galleries,
+    NumberGalleryPerRow = 4,
+    GalleryColumns = (repository.galleries.Count()/4) + (repository.galleries.Count()%4 == 0 ? 0:1)
 });
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

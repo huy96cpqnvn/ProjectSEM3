@@ -3,15 +3,27 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NGO.Models;
 
 namespace NGO.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-    partial class StoreDBContextModelSnapshot : ModelSnapshot
+<<<<<<< HEAD
+    [Migration("20210107044334_Initial")]
+    partial class Initial
+=======
+<<<<<<< HEAD:NGO/NGO/Migrations/20210110034937_InitialCreate.Designer.cs
+    [Migration("20210110034937_InitialCreate")]
+    partial class InitialCreate
+=======
+    [Migration("20210107044334_Initial")]
+    partial class Initial
+>>>>>>> ce4259d245cec8f61255e4c09f6e2e581a57ae10:NGO/NGO/Migrations/20210107044334_Initial.Designer.cs
+>>>>>>> ce4259d245cec8f61255e4c09f6e2e581a57ae10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

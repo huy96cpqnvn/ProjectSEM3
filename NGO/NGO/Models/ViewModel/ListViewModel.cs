@@ -11,7 +11,10 @@ namespace NGO.Models.ViewModel
         public IEnumerable<Programme> Programmes { get; set; }
         public IEnumerable<Article> Articles { get; set; }
         public IEnumerable<Gallery> Galleries { get; set; }
+        public int NumberGalleryPerRow { get; set; }
+        public int GalleryColumns { get; set; }
         public IEnumerable<AboutUs> aboutUs { get; set; }
         public IEnumerable<Ngo> Ngos { get; set; }
+        public PageInfo PageInfo { get; set; }
     }
 }
