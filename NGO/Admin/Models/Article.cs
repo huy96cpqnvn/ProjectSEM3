@@ -27,6 +27,6 @@ namespace Admin.Models
         [DisplayName("Upload File")]
         public IFormFile ImageFile { get; set; }
 
-        
+        public virtual ICollection<Article> Articles { get; set; }
     }
 }
