@@ -53,10 +53,33 @@ namespace NGO.Controllers
         TotalItems = repository.articles.Count()
     },
 });
-        public ViewResult Causes()
+
+        public IActionResult ArticleFullSummary(string article_name)
+=> View(new ListViewModel
+{
+    Articles = repository.articles.Where(a => a.Name == article_name)
+});
+
+        public IActionResult PartnerFullSummary(string partner_name)
+=> View(new ListViewModel
+{
+    Ngos = repository.ngos.Where(a => a.Name == partner_name)
+});
+
+
+        public ViewResult Causes(int newsPage = 1)
 => View(new ListViewModel
 {
     Programmes = repository.programmes
+    .OrderBy(p => p.Id)
+               .Skip((newsPage - 1) * PageSize)
+               .Take(PageSize),
+    PageInfo = new PageInfo
+    {
+        CurrentPage = newsPage,
+        ItemsPerPage = PageSize,
+        TotalItems = repository.programmes.Count()
+    }
 });
         public ViewResult Contact()
 => View(new ListViewModel
@@ -68,17 +91,21 @@ namespace NGO.Controllers
 {
 
 });
-        public ViewResult Partner()
+        public ViewResult Partner(int newsPage = 1)
 => View(new ListViewModel
 {
+    Ngos = repository.ngos
+    .OrderBy(p => p.Id)
+               .Skip((newsPage - 1) * PageSize)
+               .Take(PageSize),
+    PageInfo = new PageInfo
+    {
+        CurrentPage = newsPage,
+        ItemsPerPage = PageSize,
+        TotalItems = repository.ngos.Count()
+    }
 
 });
-
-        public IActionResult ArticleSummary(int id)
-        => View(new ListViewModel
-        {
-            Articles = repository.articles.Where(a => a.Id == id)
-        });
 
         public ViewResult Gallery()
 => View(new ListViewModel
