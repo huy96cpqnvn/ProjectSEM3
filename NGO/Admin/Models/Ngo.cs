@@ -13,5 +13,6 @@ namespace Admin.Models
         public string ImageNgo { get; set; }
         [MaxLength(10000)]
         public string Description { get; set; }
+        public virtual ICollection<Ngo> Ngos { get; set; }
     }
 }

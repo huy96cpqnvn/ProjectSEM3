@@ -54,16 +54,16 @@ namespace NGO.Controllers
     },
 });
 
-        public IActionResult ArticleFullSummary(string article_name)
+        public IActionResult ArticlePageDetail(int article_id)
 => View(new ListViewModel
 {
-    Articles = repository.articles.Where(a => a.Name == article_name)
+    Articles = repository.articles.Where(a => a.Id == article_id)
 });
 
-        public IActionResult PartnerFullSummary(string partner_name)
+        public IActionResult PartnerPageDetail(int partner_id)
 => View(new ListViewModel
 {
-    Ngos = repository.ngos.Where(a => a.Name == partner_name)
+    Ngos = repository.ngos.Where(a => a.Id == partner_id)
 });
 
 
@@ -80,6 +80,11 @@ namespace NGO.Controllers
         ItemsPerPage = PageSize,
         TotalItems = repository.programmes.Count()
     }
+});
+        public IActionResult ProgrammesPageDetail(int program_id)
+=> View(new ListViewModel
+{
+Programmes = repository.programmes.Where(a => a.Id == program_id)
 });
         public ViewResult Contact()
 => View(new ListViewModel

@@ -1,7 +1,7 @@
 ﻿@model Article
 <div class="col-md-4 d-flex ftco-animate">
     <div class="blog-entry align-self-stretch">
-        <a asp-area="" asp-controller="Home" asp-action="ArticleFullSummary" asp-route-article_name="@Model.Name" class="block-20" style="background-image: url('../images/@Model.ImagesNew');">
+        <a asp-area="" asp-controller="Home" asp-action="ArticlePageDetail" asp-route-article_id="@Model.Id" class="block-20" style="background-image: url('../images/@Model.ImagesNew');">
         </a>
         <div class="text p-4 d-block">
             <div class="meta mb-3">

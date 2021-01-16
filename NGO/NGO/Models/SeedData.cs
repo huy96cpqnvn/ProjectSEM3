@@ -31,16 +31,16 @@ namespace NGO.Models
                     },
                     new Ngo
                     {
-                        Name = "Save the children",
+                        Name = "Mudita Foundation",
                         ImageNgo = "event-2.jpg",
-                        Description = "WE CAN END CHILD HUNGER.",
+                        Description = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within!",
 
                     },
                     new Ngo
                     {
-                        Name = "Làng trẻ em SOS",
+                        Name = "Topica Foundation",
                         ImageNgo = "event-3.jpg",
-                        Description = "Làng trẻ em SOS là nơi chăm sóc, nuôi dưỡng, hỗ trợ trẻ em mồ côi, trẻ em bị bỏ rơi và trẻ em có hoàn cảnh khó khăn.",
+                        Description = "We work to improve living conditions of underpriviledged and orphaned children in Myanmar. In order to achieve that we need your support. Help us today",
 
                     },
                     new Ngo
@@ -136,37 +136,59 @@ namespace NGO.Models
             if (!context.Programmes.Any())
             {
                 context.Programmes.AddRange(
-                    new Programme
+                   new Programme
                     {
-                        Name = "Education"
+                       Name = "Help us to Provide Food to the Hungry",
+                       Description = "Majority of the underprivileged patients admitted in Government hospitals are those who come from nearby states are often poor, in several cases family members decide to stay hungry to save money.",
+                       ImagesProgram = "cause-1.jpg"
                     },
 
                     new Programme
                     {
-                        Name = "Child Protection"
+                        Name = "Donate Hygiene and Dignity Kit for Women",
+                        Description = "We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities .",
+                        ImagesProgram = "cause-2.jpg"
                     },
 
                     new Programme
                     {
-                        Name = "Health and Nutrition"
+                        Name = "Donate Educational Kit for Children",
+                        Description = "We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education, to ensure a bright and promising future.",
+                        ImagesProgram = "cause-3.jpg"
                     },
 
                     new Programme
                     {
-                        Name = "Safeguarding the Natural World "
+                        Name = "Donate A Blanket. Save A Life",
+                        Description = "Every winter, Sunflower Foundation runs a Blanket Donation Campaign, where we provide high quality warm blankets along with dry ration and dignity kits to the underprivileged living in the open on the streets. We try our best to reach out to people.",
+                        ImagesProgram = "cause-4.jpg"
                     },
 
                     new Programme
                     {
-                        Name = "Support for people with disabilities"
+                        Name = "Donate food on Death Anniversary of Loved Ones",
+                        Description = "Sunflower Foundation will help you to conduct food donation drives on the death anniversary of your near and dear ones. Round the year, we conduct thousands of food donation drives on death anniversaries as per request of our donors.",
+                        ImagesProgram = "cause-5.jpg"
                     },
 
                     new Programme
                     {
-                        Name = "Support from overcome poverty, and achieve equal rights and voice"
+                        Name = "Donate Your Old Clothes",
+                        Description = "Our Clothes donation drive is exclusively meant for the children and adults in the hospitals, children living near railway tracks, under flyovers, children of daily wagers at construction sites, under- privileged children in Govt. ",
+                        ImagesProgram = "cause-6.jpg"
+                    },
+                    new Programme
+                    {
+                        Name = "Help the homeless patients awaiting treatment",
+                        Description = "Everyday thousands of poor patients come to Delhi for medical treatment. Apart from the medical treatment they face an everyday struggle for food, water and lodging. Majority of these patients remain in critical condition as their healthcare.",
+                        ImagesProgram = "cause-1.jpg"
+                    },
+                    new Programme
+                    {
+                        Name = "Emergency response and disaster relife",
+                        Description = "Our team along with volunteers and doctors are always first to respond to natural or manmade disasters, with principal response efforts focused on food, shelter, water, health and sanitation. ",
+                        ImagesProgram = "cause-3.jpg"
                     }
-
-
                 );
                 context.SaveChanges();
             }

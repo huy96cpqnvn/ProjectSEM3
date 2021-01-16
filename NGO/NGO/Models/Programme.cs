@@ -9,7 +9,10 @@ namespace NGO.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
+        public string ImagesProgram { get; set; }
         public virtual ICollection<Donate> Donates { get; set; }
         public virtual ICollection<Article> Articles { get; set; }
+        public virtual ICollection<Programme> Programmes { get; set; }
     }
 }
