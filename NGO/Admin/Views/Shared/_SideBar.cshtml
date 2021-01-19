@@ -8,44 +8,52 @@
                 </a>
             </li>
             <li class="nav-title">Components</li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#">
-                    <i class="nav-icon icon-puzzle"></i> Management
-                </a>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Articles" asp-action="Index">
-                            <i class="nav-icon icon-puzzle"></i> News
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Donates" asp-action="Index">
-                            <i class="nav-icon icon-puzzle"></i> Donates
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Ngoes" asp-action="Index">
-                            <i class="nav-icon icon-puzzle"></i> Ngo's
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Programmes" asp-action="Index">
-                            <i class="nav-icon icon-puzzle"></i> Programmes
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="AboutUs" asp-action="Index">
-                            <i class="nav-icon icon-puzzle"></i> About Us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Galleries" asp-action="Index">
-                            <i class="nav-icon icon-puzzle"></i> Gallery
-                        </a>
-                    </li>
-                </ul>
-            </li>
-         </ul>
+            @if (User.Identity.IsAuthenticated) { 
+        <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> Management
+            </a>
+            <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Articles" asp-action="Index">
+                        <i class="nav-icon icon-puzzle"></i> News
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Donates" asp-action="Index">
+                        <i class="nav-icon icon-puzzle"></i> Donates
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Ngoes" asp-action="Index">
+                        <i class="nav-icon icon-puzzle"></i> Ngo's
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Programmes" asp-action="Index">
+                        <i class="nav-icon icon-puzzle"></i> Programmes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="AboutUs" asp-action="Index">
+                        <i class="nav-icon icon-puzzle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Galleries" asp-action="Index">
+                        <i class="nav-icon icon-puzzle"></i> Gallery
+                    </a>
+                </li>
+            </ul>
+        </li>
+            } else
+            {
+            <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> Management
+            </a>
+            }
+
+        </ul>
     </nav>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </div>

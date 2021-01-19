@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NGO.Models;
@@ -24,7 +25,7 @@ namespace NGO.Controllers
         //{
         //    return View();
         //}
-
+        
         public ViewResult Index()
                 => View(new ListViewModel
                 {

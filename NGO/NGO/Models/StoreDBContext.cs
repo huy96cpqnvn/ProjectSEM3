@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace NGO.Models
 {
-    public class StoreDBContext : DbContext
+    public class StoreDBContext : IdentityDbContext
     {
         public StoreDBContext(DbContextOptions<StoreDBContext> options) : base(options)
         {
 
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder
-                .UseLazyLoadingProxies()
-                .UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database=ngo;MultipleActiveResultSets=true");
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+        }
         public DbSet<Donate> Donates { get; set; }
         public DbSet<Gallery>  Galleries { get; set; }
         public DbSet<Article> Articles { get; set; }

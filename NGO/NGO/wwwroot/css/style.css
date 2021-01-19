@@ -7301,14 +7301,17 @@ h1, h2, h3, h4, h5,
 
 .text-primary {
   color: #f86f2d !important; }
-
+.form_login,
+.form_register {
+    margin: 100px 0 30px;
+}
 .ftco-navbar-light {
-  background: transparent !important;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  top: 10px; }
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    top: 0px;
+}
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       background: #000 !important;

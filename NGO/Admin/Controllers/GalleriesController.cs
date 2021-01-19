@@ -6,16 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Admin.Models;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace Admin.Controllers
 {
     public class GalleriesController : Controller
     {
         private readonly StoreDBContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public GalleriesController(StoreDBContext context)
+        public GalleriesController(StoreDBContext context, IWebHostEnvironment hostingEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostingEnvironment;
         }
 
         // GET: Galleries
@@ -53,10 +57,19 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ImageGallery")] Gallery gallery)
+        public async Task<IActionResult> Create([Bind("Id,Name,ImageFile")] Gallery gallery)
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(gallery.ImageFile.FileName);
+                string extension = Path.GetExtension(gallery.ImageFile.FileName);
+                gallery.ImageGallery = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await gallery.ImageFile.CopyToAsync(fileStream);
+                }
                 _context.Add(gallery);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -85,7 +98,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageGallery")] Gallery gallery)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageFile")] Gallery gallery)
         {
             if (id != gallery.Id)
             {
@@ -94,6 +107,15 @@ namespace Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(gallery.ImageFile.FileName);
+                string extension = Path.GetExtension(gallery.ImageFile.FileName);
+                gallery.ImageGallery = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await gallery.ImageFile.CopyToAsync(fileStream);
+                }
                 try
                 {
                     _context.Update(gallery);

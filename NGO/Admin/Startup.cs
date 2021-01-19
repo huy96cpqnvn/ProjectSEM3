@@ -68,7 +68,6 @@ namespace Admin
             });
             SeedData.SeedDataNgo(app);
 
-
         }
     }
 }

@@ -6,16 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Admin.Models;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace Admin.Controllers
 {
     public class NgoesController : Controller
     {
         private readonly StoreDBContext _context;
-
-        public NgoesController(StoreDBContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public NgoesController(StoreDBContext context, IWebHostEnvironment hostingEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostingEnvironment;
         }
 
         // GET: Ngoes
@@ -53,10 +56,19 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ImageNgo,Description")] Ngo ngo)
+        public async Task<IActionResult> Create([Bind("Id,Name,ImageFile,Description")] Ngo ngo)
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(ngo.ImageFile.FileName);
+                string extension = Path.GetExtension(ngo.ImageFile.FileName);
+                ngo.ImageNgo = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await ngo.ImageFile.CopyToAsync(fileStream);
+                }
                 _context.Add(ngo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -85,7 +97,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageNgo,Description")] Ngo ngo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageFile,Description")] Ngo ngo)
         {
             if (id != ngo.Id)
             {
@@ -94,6 +106,16 @@ namespace Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(ngo.ImageFile.FileName);
+                string extension = Path.GetExtension(ngo.ImageFile.FileName);
+                ngo.ImageNgo = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await ngo.ImageFile.CopyToAsync(fileStream);
+                }
+
                 try
                 {
                     _context.Update(ngo);

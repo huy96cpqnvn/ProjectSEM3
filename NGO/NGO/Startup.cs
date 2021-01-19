@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,13 +26,10 @@ namespace NGO
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration.GetConnectionString("default");
+            services.AddDbContext<StoreDBContext>(c => c.UseSqlServer(connectionString));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<StoreDBContext>();
             services.AddControllersWithViews();
-            services.AddDbContext<StoreDBContext>(opts =>
-            {
-                opts.UseSqlServer(
-                        Configuration["ConnectionStrings:NgoConnection"]
-                    );
-            });
             services.AddScoped<IStoreRepository, EFStoreRepository>();
             services.AddRazorPages();
             services.AddDistributedMemoryCache();
@@ -63,7 +61,7 @@ namespace NGO
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapDefaultControllerRoute();
             });
-            SeedData.SeedDataNgo(app);
+            //SeedData.SeedDataNgo(app);
         }
     }
 }

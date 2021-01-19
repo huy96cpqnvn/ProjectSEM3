@@ -6,16 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Admin.Models;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace Admin.Controllers
 {
     public class ProgrammesController : Controller
     {
         private readonly StoreDBContext _context;
-
-        public ProgrammesController(StoreDBContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public ProgrammesController(StoreDBContext context, IWebHostEnvironment hostingEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostingEnvironment;
         }
 
         // GET: Programmes
@@ -53,10 +56,19 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Programme programme)
+        public async Task<IActionResult> Create([Bind("Id,Name,ImageFile")] Programme programme)
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(programme.ImageFile.FileName);
+                string extension = Path.GetExtension(programme.ImageFile.FileName);
+                programme.ImagesProgram = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await programme.ImageFile.CopyToAsync(fileStream);
+                }
                 _context.Add(programme);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -85,7 +97,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Programme programme)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageFile")] Programme programme)
         {
             if (id != programme.Id)
             {
@@ -94,6 +106,15 @@ namespace Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(programme.ImageFile.FileName);
+                string extension = Path.GetExtension(programme.ImageFile.FileName);
+                programme.ImagesProgram = fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
+                string path = Path.Combine(wwwRootPath + "/images", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await programme.ImageFile.CopyToAsync(fileStream);
+                }
                 try
                 {
                     _context.Update(programme);

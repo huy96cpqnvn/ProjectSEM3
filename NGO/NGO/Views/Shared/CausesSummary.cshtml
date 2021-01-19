@@ -6,7 +6,11 @@
                 <div class="text p-3 p-md-4">
                     <h3><a href="#">@Model.Name</a></h3>
                     <p>@Model.Description</p>
-                    <p><a href="#" style="background-color: orange" class="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
+
+                        <p><a style="background-color: orange" class="btn btn-white px-3 py-2 mt-2" asp-controller="Donates" asp-action="Create">Donate Now</a></p>
+
+                        @*<p><a style="background-color: orange" class="btn btn-white px-3 py-2 mt-2" asp-controller="Account" asp-action="Login">Donate Now</a></p>*@
+
                 </div>
             </div>
         </div>

@@ -47,6 +47,9 @@ namespace Admin.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("ArticleId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
@@ -61,6 +64,8 @@ namespace Admin.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ArticleId");
 
                     b.HasIndex("ProgrammeId");
 
@@ -86,6 +91,9 @@ namespace Admin.Migrations
 
                     b.Property<int?>("ProgrammeId")
                         .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -129,7 +137,12 @@ namespace Admin.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("NgoId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("NgoId");
 
                     b.ToTable("Ngos");
                 });
@@ -141,12 +154,23 @@ namespace Admin.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagesProgram")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<int?>("ProgrammeId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ProgrammeId");
 
                     b.ToTable("Programmes");
                 });
@@ -349,6 +373,10 @@ namespace Admin.Migrations
 
             modelBuilder.Entity("Admin.Models.Article", b =>
                 {
+                    b.HasOne("Admin.Models.Article", null)
+                        .WithMany("Articles")
+                        .HasForeignKey("ArticleId");
+
                     b.HasOne("Admin.Models.Programme", "Programmes")
                         .WithMany("Articles")
                         .HasForeignKey("ProgrammeId");
@@ -363,6 +391,20 @@ namespace Admin.Migrations
                         .HasForeignKey("ProgrammeId");
 
                     b.Navigation("Programmes");
+                });
+
+            modelBuilder.Entity("Admin.Models.Ngo", b =>
+                {
+                    b.HasOne("Admin.Models.Ngo", null)
+                        .WithMany("Ngos")
+                        .HasForeignKey("NgoId");
+                });
+
+            modelBuilder.Entity("Admin.Models.Programme", b =>
+                {
+                    b.HasOne("Admin.Models.Programme", null)
+                        .WithMany("Programmes")
+                        .HasForeignKey("ProgrammeId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -416,11 +458,23 @@ namespace Admin.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Admin.Models.Article", b =>
+                {
+                    b.Navigation("Articles");
+                });
+
+            modelBuilder.Entity("Admin.Models.Ngo", b =>
+                {
+                    b.Navigation("Ngos");
+                });
+
             modelBuilder.Entity("Admin.Models.Programme", b =>
                 {
                     b.Navigation("Articles");
 
                     b.Navigation("Donates");
+
+                    b.Navigation("Programmes");
                 });
 #pragma warning restore 612, 618
         }
