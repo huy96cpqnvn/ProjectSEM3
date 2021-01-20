@@ -123,7 +123,7 @@ namespace NGO.Models
                     },
                     new Gallery
                     {
-                        Name = "Các con Làng trẻ em SOS tham gia Chiến dịch “Tôi chọn hành tinh xanh”",
+                        Name = "SOS Children's Village participates in Campaign “I choose the blue planet”",
                         ImageGallery = "https://sosvietnam.org/getmedia/583440e2-9640-4eea-8ffe-1a2fa246859e/Toi-chon-hanh-tinh-xanh-6.jpg?width=425"
                     }
                 );
