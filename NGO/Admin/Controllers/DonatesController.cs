@@ -6,20 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Admin.Models;
-using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
 
 namespace Admin.Controllers
 {
     public class DonatesController : Controller
     {
         private readonly StoreDBContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
 
-        public DonatesController(StoreDBContext context, UserManager<IdentityUser> userManager)
+        public DonatesController(StoreDBContext context)
         {
             _context = context;
-            _userManager = userManager;
         }
 
         // GET: Donates
@@ -60,21 +56,10 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Price,ProgrammeId,DateDonate,Description, UserId")] Donate donate)
+        public async Task<IActionResult> Create([Bind("Id,Price,ProgrammeId,DateDonate,Description,IsActive,UserId")] Donate donate)
         {
             if (ModelState.IsValid)
             {
-                //var user = await _userManager.FindByIdAsync("Id of currently logged in user");
-                //donate.UserId = user;
-
-                //donate = new Donate
-                //{
-                //    Price = donate.Price,
-                //    ProgrammeId = donate.ProgrammeId,
-                //    DateDonate = donate.DateDonate,
-                //    Description = donate.Description,
-                    
-                //};
                 _context.Add(donate);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -105,7 +90,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Price,ProgrammeId,DateDonate,Description")] Donate donate)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Price,ProgrammeId,DateDonate,Description,IsActive,UserId")] Donate donate)
         {
             if (id != donate.Id)
             {

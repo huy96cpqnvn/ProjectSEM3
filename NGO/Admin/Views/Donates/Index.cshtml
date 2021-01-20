@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Index</h1>
@@ -16,13 +17,16 @@
                 @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Programmes.Name)
+                @Html.DisplayNameFor(model => model.Programmes)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DateDonate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
             </th>
             <th></th>
         </tr>
@@ -34,13 +38,16 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Programmes.Id)
+                @Html.DisplayFor(modelItem => item.Programmes.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateDonate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @(item.IsActive == true ? "Yes" : "No")
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

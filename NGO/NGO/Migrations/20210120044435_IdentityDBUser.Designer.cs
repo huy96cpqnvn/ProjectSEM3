@@ -10,7 +10,7 @@ using NGO.Models;
 namespace NGO.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-    [Migration("20210119052543_IdentityDBUser")]
+    [Migration("20210120044435_IdentityDBUser")]
     partial class IdentityDBUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -284,6 +284,9 @@ namespace NGO.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");

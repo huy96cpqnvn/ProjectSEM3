@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Admin.Migrations
+namespace NGO.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class IdentityDBUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace Admin.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImageAbout = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -103,7 +103,7 @@ namespace Admin.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImagesProgram = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProgrammeId = table.Column<int>(type: "int", nullable: true)
@@ -233,8 +233,8 @@ namespace Admin.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true),
-                    ProgrammeId = table.Column<int>(type: "int", nullable: true),
                     ImagesNew = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    ProgrammeId = table.Column<int>(type: "int", nullable: true),
                     ArticleId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -264,6 +264,7 @@ namespace Admin.Migrations
                     ProgrammeId = table.Column<int>(type: "int", nullable: true),
                     DateDonate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
