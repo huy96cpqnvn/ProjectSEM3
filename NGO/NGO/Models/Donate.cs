@@ -16,7 +16,7 @@ namespace NGO.Models
 
         [MaxLength(10000)]
         public string Description { get; set; }
-
+        public bool IsActive { get; set; }
         public string UserId { get; set; }
     }
 }
