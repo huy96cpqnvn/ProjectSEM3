@@ -21,6 +21,7 @@ namespace NGO.Models
         [Column(TypeName = "nvarchar(100)")]
         [DisplayName("Image Name")]
         public string ImagesNew { get; set; }
+        public string Content { get; set; }
 
         [NotMapped]
         [DisplayName("Upload File")]

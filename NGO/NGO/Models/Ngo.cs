@@ -16,6 +16,7 @@ namespace NGO.Models
 
         [DisplayName("Image Name")]
         public string ImageNgo { get; set; }
+        public string Content { get; set; }
 
         [NotMapped]
         [DisplayName("Upload File")]

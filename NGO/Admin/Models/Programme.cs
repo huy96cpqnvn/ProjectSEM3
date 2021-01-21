@@ -18,6 +18,7 @@ namespace Admin.Models
 
         [DisplayName("Image Name")]
         public string ImagesProgram { get; set; }
+        public string Content { get; set; }
 
         [NotMapped]
         [DisplayName("Upload File")]

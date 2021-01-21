@@ -25,6 +25,7 @@ namespace Admin.Models
                         Name = "Oxfam",
                         ImageNgo = "event-1.jpg",
                         Description = "Oxfam in Vietnam is part of a global network of Oxfam affiliates and development projects working in more than 90 countries. With our partners, allies and with local communities, we help people to claim rights for themselves.",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     },
                     new Ngo
@@ -32,6 +33,7 @@ namespace Admin.Models
                         Name = "Mudita Foundation",
                         ImageNgo = "event-2.jpg",
                         Description = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within!",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     },
                     new Ngo
@@ -39,6 +41,7 @@ namespace Admin.Models
                         Name = "Topica Foundation",
                         ImageNgo = "event-3.jpg",
                         Description = "We work to improve living conditions of underpriviledged and orphaned children in Myanmar. In order to achieve that we need your support. Help us today",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     },
                     new Ngo
@@ -47,6 +50,7 @@ namespace Admin.Models
                         ImageNgo = "event-4.jpg",
                         Description = "We serve some of Vietnam’s most vulnerable groups in remote mountainous and urban areas to help them benefit from development, overcome poverty, and achieve equal rights and voice. At the same times, we provide humanitarian and emergency assistance in times of natural disasters." +
                         "We put women in the center because we know that we cannot overcome poverty until all people have equal rights and opportunities.",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     },
                     new Ngo
@@ -54,6 +58,7 @@ namespace Admin.Models
                         Name = "UNICEF",
                         ImageNgo = "event-5.jpg",
                         Description = "UNICEF is the global leader promoting and protecting children’s rights in 190 countries, including Viet Nam.",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     },
                     new Ngo
@@ -61,6 +66,7 @@ namespace Admin.Models
                         Name = "World Wide Fund For Nature",
                         ImageNgo = "event-6.jpg",
                         Description = "Here at WWF, an independent conservation organization active in nearly 100 countries, we are working to sustain the natural world for the benefit of people and wildlife.",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     },
                     new Ngo
@@ -68,6 +74,7 @@ namespace Admin.Models
                         Name = "OxfamA",
                         ImageNgo = "event-1.jpg",
                         Description = "Oxfam in Vietnam is part of a global network of Oxfam affiliates and development projects working in more than 90 countries. With our partners, allies and with local communities, we help people to claim rights for themselves.",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     },
                     new Ngo
@@ -75,6 +82,7 @@ namespace Admin.Models
                         Name = "CARE International",
                         ImageNgo = "event-5.jpg",
                         Description = "Oxfam in Vietnam is part of a global network of Oxfam affiliates and development projects working in more than 90 countries. With our partners, allies and with local communities, we help people to claim rights for themselves.",
+                        Content = "We invite you to be part of the Mudita Family. Your donation means the world to us, no matter how big and small and donating below is fast and secure. Support us and feel the Mudita within! Our projects are mapped out based on which area of the school may require refurbishment or development.Once a project is complete, we enjoy walking our audience through each stage of development on our social media platforms and website. We have a large team here at Mudita Foundation, mainly Burmese people to support our local community. Further support from our international team includes marketing, design, content creation and media from volunteers all over the world who spend their time and effort to support our organisation, and we are forever grateful."
 
                     }
                 );
@@ -138,54 +146,69 @@ namespace Admin.Models
                     {
                         Name = "Help us to Provide Food to the Hungry",
                         Description = "Majority of the underprivileged patients admitted in Government hospitals are those who come from nearby states are often poor, in several cases family members decide to stay hungry to save money.",
-                        ImagesProgram = "cause-1.jpg"
+                        ImagesProgram = "cause-1.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
                     },
 
                     new Programme
                     {
                         Name = "Donate Hygiene and Dignity Kit for Women",
                         Description = "We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities .",
-                        ImagesProgram = "cause-2.jpg"
+                        ImagesProgram = "cause-2.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
+
                     },
 
                     new Programme
                     {
                         Name = "Donate Educational Kit for Children",
                         Description = "We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education, to ensure a bright and promising future.",
-                        ImagesProgram = "cause-3.jpg"
+                        ImagesProgram = "cause-3.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
+
                     },
 
                     new Programme
                     {
                         Name = "Donate A Blanket. Save A Life",
                         Description = "Every winter, Sunflower Foundation runs a Blanket Donation Campaign, where we provide high quality warm blankets along with dry ration and dignity kits to the underprivileged living in the open on the streets. We try our best to reach out to people.",
-                        ImagesProgram = "cause-4.jpg"
+                        ImagesProgram = "cause-4.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
+
                     },
 
                     new Programme
                     {
                         Name = "Donate food on Death Anniversary of Loved Ones",
                         Description = "Sunflower Foundation will help you to conduct food donation drives on the death anniversary of your near and dear ones. Round the year, we conduct thousands of food donation drives on death anniversaries as per request of our donors.",
-                        ImagesProgram = "cause-5.jpg"
+                        ImagesProgram = "cause-5.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
+
                     },
 
                     new Programme
                     {
                         Name = "Donate Your Old Clothes",
                         Description = "Our Clothes donation drive is exclusively meant for the children and adults in the hospitals, children living near railway tracks, under flyovers, children of daily wagers at construction sites, under- privileged children in Govt. ",
-                        ImagesProgram = "cause-6.jpg"
+                        ImagesProgram = "cause-6.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
+
                     },
                     new Programme
                     {
                         Name = "Help the homeless patients awaiting treatment",
                         Description = "Everyday thousands of poor patients come to Delhi for medical treatment. Apart from the medical treatment they face an everyday struggle for food, water and lodging. Majority of these patients remain in critical condition as their healthcare.",
-                        ImagesProgram = "cause-1.jpg"
+                        ImagesProgram = "cause-1.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
+
                     },
                     new Programme
                     {
                         Name = "Emergency response and disaster relife",
                         Description = "Our team along with volunteers and doctors are always first to respond to natural or manmade disasters, with principal response efforts focused on food, shelter, water, health and sanitation. ",
-                        ImagesProgram = "cause-3.jpg"
+                        ImagesProgram = "cause-3.jpg",
+                        Content = "How does it feel not having a roof over the head? It is hard for us to even imagine, but think about those for whom living on the streets is a reality. We know their life is stressful and full of challenges. We cannot solve the problem of homelessness overnight but we can definitely support early education for the homeless children in our society. Education is a continuous and life changing process and we at Sunflower Foundation feel that no children should be deprived of their right to education. We need your support in providing Educational Kit for Children in need. We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education. It is our responsibility to ensure a bright and promising future for our next generation. Let’s join hands for a brighter future."
+
                     }
                 );
                 context.SaveChanges();
@@ -241,49 +264,62 @@ namespace Admin.Models
                             ProgrammeId = 1,
                             Name = "Donate Your Old Clothes",
                             Description = "Our Clothes donation drive is exclusively meant for the children and adults in the hospitals, children living near railway tracks, under flyovers, children of daily wagers at construction sites, under- privileged children in Govt.",
-                            ImagesNew = "image_1.jpg"
+                            ImagesNew = "image_1.jpg",
+                            Content = "Women have been fighting for dignity for centuries now and this fight is far from over. This fight cuts across boundaries, age groups, cultures and societal status. Spare a moment and think about the plight of homeless women. The insecurity, stigma, illness, humiliation, health issues, physical abuse etc. the struggle is endless. We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities.There is a need to treat planet Earth as our home and all humans sharing this space as our own. Let us strive to improve the lives of homeless women by creating a safe and secure environment for them. We advocate for a dignified life for every women, every child and every family. We are making Hygiene and Dignity Kits for Women."
                         },
                          new Article
                          {
                              ProgrammeId = 1,
                              Name = "Donate food on Death Anniversary of Loved Ones",
                              Description = "Sunflower Foundation will help you to conduct food donation drives on the death anniversary of your near and dear ones. Round the year, we conduct thousands of food donation drives on death anniversaries as per request of our donors..",
-                             ImagesNew = "image_2.jpg"
+                             ImagesNew = "image_2.jpg",
+                             Content = "Women have been fighting for dignity for centuries now and this fight is far from over. This fight cuts across boundaries, age groups, cultures and societal status. Spare a moment and think about the plight of homeless women. The insecurity, stigma, illness, humiliation, health issues, physical abuse etc. the struggle is endless. We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities.There is a need to treat planet Earth as our home and all humans sharing this space as our own. Let us strive to improve the lives of homeless women by creating a safe and secure environment for them. We advocate for a dignified life for every women, every child and every family. We are making Hygiene and Dignity Kits for Women."
+
                          },
                           new Article
                           {
                               ProgrammeId = 1,
                               Name = "Donate Hygiene and Dignity Kit for Women",
                               Description = "We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities .",
-                              ImagesNew = "image_3.jpg"
+                              ImagesNew = "image_3.jpg",
+                              Content = "Women have been fighting for dignity for centuries now and this fight is far from over. This fight cuts across boundaries, age groups, cultures and societal status. Spare a moment and think about the plight of homeless women. The insecurity, stigma, illness, humiliation, health issues, physical abuse etc. the struggle is endless. We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities.There is a need to treat planet Earth as our home and all humans sharing this space as our own. Let us strive to improve the lives of homeless women by creating a safe and secure environment for them. We advocate for a dignified life for every women, every child and every family. We are making Hygiene and Dignity Kits for Women."
+
                           },
                            new Article
                            {
                                ProgrammeId = 1,
                                Name = "Donate Educational Kit for Children",
                                Description = "We do get a lot of support for children around children’s day. We feel every day is a children’s day. It’s time we who are educated, engage with homeless children and support their education.",
-                               ImagesNew = "image_4.jpg"
+                               ImagesNew = "image_4.jpg",
+                               Content = "Women have been fighting for dignity for centuries now and this fight is far from over. This fight cuts across boundaries, age groups, cultures and societal status. Spare a moment and think about the plight of homeless women. The insecurity, stigma, illness, humiliation, health issues, physical abuse etc. the struggle is endless. We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities.There is a need to treat planet Earth as our home and all humans sharing this space as our own. Let us strive to improve the lives of homeless women by creating a safe and secure environment for them. We advocate for a dignified life for every women, every child and every family. We are making Hygiene and Dignity Kits for Women."
+
                            },
                             new Article
                             {
                                 ProgrammeId = 1,
                                 Name = "Celebrate New Year 2021 by donating warm blankets for poor homeless",
                                 Description = "New Year’s Resolution 2021 : Celebrate New Year 2021 by helping NGO Sunflower Foundation. Donate blanket for poor homeless and children.",
-                                ImagesNew = "image_5.jpg"
+                                ImagesNew = "image_5.jpg",
+                                Content = "Women have been fighting for dignity for centuries now and this fight is far from over. This fight cuts across boundaries, age groups, cultures and societal status. Spare a moment and think about the plight of homeless women. The insecurity, stigma, illness, humiliation, health issues, physical abuse etc. the struggle is endless. We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities.There is a need to treat planet Earth as our home and all humans sharing this space as our own. Let us strive to improve the lives of homeless women by creating a safe and secure environment for them. We advocate for a dignified life for every women, every child and every family. We are making Hygiene and Dignity Kits for Women."
+
                             },
                              new Article
                              {
                                  ProgrammeId = 1,
                                  Name = "Help us to feed poor patients and their families outside hospitals",
                                  Description = "Majority of the underprivileged patients admitted in Government hospitals are those who come from nearby states are often poor, in several cases family members decide to stay hungry to save money.",
-                                 ImagesNew = "image_6.jpg"
+                                 ImagesNew = "image_6.jpg",
+                                 Content = "Women have been fighting for dignity for centuries now and this fight is far from over. This fight cuts across boundaries, age groups, cultures and societal status. Spare a moment and think about the plight of homeless women. The insecurity, stigma, illness, humiliation, health issues, physical abuse etc. the struggle is endless. We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities.There is a need to treat planet Earth as our home and all humans sharing this space as our own. Let us strive to improve the lives of homeless women by creating a safe and secure environment for them. We advocate for a dignified life for every women, every child and every family. We are making Hygiene and Dignity Kits for Women."
+
                              },
                               new Article
                               {
                                   ProgrammeId = 1,
                                   Name = "Help us to Provide Food to the Hungry",
                                   Description = "Majority of the underprivileged patients admitted in Government hospitals are those who come from nearby states are often poor, in several cases family members decide to stay hungry to save money.",
-                                  ImagesNew = "image_1.jpg"
+                                  ImagesNew = "image_1.jpg",
+                                  Content = "Women have been fighting for dignity for centuries now and this fight is far from over. This fight cuts across boundaries, age groups, cultures and societal status. Spare a moment and think about the plight of homeless women. The insecurity, stigma, illness, humiliation, health issues, physical abuse etc. the struggle is endless. We at Sunflower Foundation have witnessed these struggles homeless women go through with close quarters. While efforts are being taken to provide safe shelters to this section, we cannot shy away from our responsibilities.There is a need to treat planet Earth as our home and all humans sharing this space as our own. Let us strive to improve the lives of homeless women by creating a safe and secure environment for them. We advocate for a dignified life for every women, every child and every family. We are making Hygiene and Dignity Kits for Women."
+
                               }
                     );
                 context.SaveChanges();

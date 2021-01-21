@@ -21,6 +21,7 @@ namespace Admin.Models
 
         [MaxLength(10000)]
         public string Description { get; set; }
+        public string Content { get; set; }
         public virtual ICollection<Ngo> Ngos { get; set; }
     }
 }
