@@ -84,6 +84,7 @@ namespace Admin.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImageNgo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NgoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -106,6 +107,7 @@ namespace Admin.Migrations
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImagesProgram = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProgrammeId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -235,6 +237,7 @@ namespace Admin.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", maxLength: 10000, nullable: true),
                     ProgrammeId = table.Column<int>(type: "int", nullable: true),
                     ImagesNew = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ArticleId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

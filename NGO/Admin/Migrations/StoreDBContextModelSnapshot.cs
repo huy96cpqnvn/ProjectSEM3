@@ -50,6 +50,9 @@ namespace Admin.Migrations
                     b.Property<int?>("ArticleId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
@@ -130,6 +133,9 @@ namespace Admin.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
@@ -156,6 +162,9 @@ namespace Admin.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");

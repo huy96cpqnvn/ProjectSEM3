@@ -10,7 +10,7 @@ using NGO.Models;
 namespace NGO.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-    [Migration("20210120044435_IdentityDBUser")]
+    [Migration("20210122090617_IdentityDBUser")]
     partial class IdentityDBUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -249,6 +249,9 @@ namespace NGO.Migrations
                     b.Property<int?>("ArticleId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
@@ -329,6 +332,9 @@ namespace NGO.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
@@ -355,6 +361,9 @@ namespace NGO.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");

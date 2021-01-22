@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Admin.Migrations
 {
     [DbContext(typeof(StoreDBContext))]
-    [Migration("20210120030434_InitialCreate")]
+    [Migration("20210122090349_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,9 @@ namespace Admin.Migrations
 
                     b.Property<int?>("ArticleId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
@@ -132,6 +135,9 @@ namespace Admin.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
@@ -158,6 +164,9 @@ namespace Admin.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");

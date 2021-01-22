@@ -56,7 +56,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ImageFile,Description")] Ngo ngo)
+        public async Task<IActionResult> Create([Bind("Id,Name,ImageFile,Content,Description")] Ngo ngo)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageFile,Description")] Ngo ngo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageFile,Content,Description")] Ngo ngo)
         {
             if (id != ngo.Id)
             {
